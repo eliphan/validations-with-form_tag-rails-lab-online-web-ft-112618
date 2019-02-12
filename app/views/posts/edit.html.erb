@@ -35,7 +35,11 @@
     </p>
   </div>
 
-  <div class="field<%= 'field_with_errors' if @post.errors[:content].any? %>">
+  <% if @author.errors[:content].empty? %>
+    <div class="field">
+  <% else %>
+    <div class="field_with_errors">
+  <% end %>
     <%= label_tag "content", "Content" %>
     <br />
     <%= text_area_tag "content", @post.content %>
