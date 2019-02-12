@@ -1,5 +1,5 @@
 <h2>Editing "<%= @post.title %>"</h2>
-<%= form_tag post_path(@post) do %>
+<%= form_tag edit_post do %>
 
   <% if @post.errors.any? %>
     <div id="error_explanation">
